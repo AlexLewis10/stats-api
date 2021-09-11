@@ -1,0 +1,24 @@
+{
+  "name": "stats-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "node_modules/.bin/knex --knexfile=./db/knexfile.js migrate:latest",
+    "db:rollback": "node_modules/.bin/knex --knexfile=./db/knexfile.js migrate:rollback"
+  },
+  "author": "Alex Lewis",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.7",
+    "pg": "^8.6.0",
+    "postgres": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
